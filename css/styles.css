@@ -1,0 +1,313 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-text-color: #757575;
+	--title-text-color: #212121;
+	--accent-color: #2196f3;
+	--white-color: #ffffff;
+	--button-bcg: #f5f4fa;
+}
+
+body {
+	background-color: #e5e5e5fd;
+	color: var(--primary-text-color);
+
+	font-family: roboto, sans-serif;
+	letter-spacing: 0.03em;
+}
+
+/* это сброс маркеров для всех списков вообще */
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+/* можно через классы .list задавать тот же сброс точек */
+
+.is-hidden {
+	display: none;
+}
+
+/* Special Container */
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 1200px;
+	outline: 2px solid tomato;
+}
+
+/* Page header */
+
+.page-header {
+	background-color: wheat;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+/* Logo */
+
+.logo {
+	font-family: "Raleway", sans-serif;
+	color: var(--accent-color);
+
+	font-size: 26px;
+	line-height: 1.19;
+	text-decoration: none;
+}
+
+.logo.header {
+	color: var(--title-text-color);
+	font-size: 26px;
+}
+
+.logo.footer {
+	color: var(--white-color);
+}
+
+/* Site Nav */
+
+.navbar {
+	margin-bottom: 30px;
+}
+
+.site-nav .link {
+	color: var(--title-text-color);
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+	color: var(--accent-color);
+}
+
+.site-nav .link.current {
+	color: var(--accent-color);
+}
+
+.contacts-nav .link {
+	color: var(--primary-text-color);
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+}
+
+.contacts-nav .link:hover {
+	color: var(--accent-color);
+}
+
+/* Hero css */
+
+.hero {
+	text-align: center;
+}
+
+.hero-title {
+	color: var(--white-color);
+
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+
+	margin-top: 0px;
+	margin-bottom: 30px;
+	outline: 1px solid tomato;
+}
+
+.btn {
+	color: var(--white-color);
+	background-color: var(--accent-color);
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.87;
+	letter-spacing: 0.06em;
+
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px 32px;
+	border-radius: 4px;
+	min-width: 204px;
+	border: 1px solid transparent;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Features */
+
+/* .section.features {
+	padding-top: 94px;
+	padding-bottom: 94px;
+} */
+
+.feature-list {
+	margin-top: 0px;
+	margin-bottom: 94px;
+}
+
+.feature-list .title {
+	color: var(--title-text-color);
+
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.feature-list p {
+	font-size: 14px;
+	line-height: 1.71;
+
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/* What We Do and Team Headers*/
+
+.section-title {
+	color: var(--title-text-color);
+
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.17;
+	text-align: center;
+
+	margin-top: 0px;
+	margin-bottom: 50px;
+}
+
+/* Section Team*/
+
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.team-list img {
+	margin-bottom: 30px;
+}
+
+.team-list .title {
+	color: var(--title-text-color);
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.19;
+	/* text-align: center; */
+
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.team-list p {
+	font-size: 16px;
+	line-height: 1.19;
+	/* text-align: center; */
+
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.team {
+	background-color: var(--button-bcg);
+}
+
+/* Buttons Filters */
+
+.buttons button {
+	color: var(--title-text-color);
+	background-color: var(--button-bcg);
+
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62;
+
+	/* display: inline-block; */
+	padding: 6px 22px;
+	border-radius: 4px;
+}
+
+.buttons button:hover,
+.buttons button:focus {
+	color: var(--white-color);
+	background-color: var(--accent-color);
+}
+
+/* если несколько кнопок то в главном селекторе выстраивается шрифты и рамки и так далее, а во второстепенных .button.primary .button.secondary - выстраиваются отличающиеся цвета */
+
+/* Portfolio */
+
+.portfolio-list .title {
+	color: var(--title-text-color);
+
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+}
+
+.portfolio-links a {
+	color: var(--primary-text-color);
+
+	font-size: 16px;
+	line-height: 1.87;
+	text-decoration: none;
+}
+
+/* Footer */
+
+.footbar {
+	background-color: teal;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.footbar a {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.footer-links a,
+.coord {
+	display: inline-block;
+	margin-top: 0px;
+	margin-bottom: 9px;
+}
+
+.footer-links .coord {
+	color: #ffffff;
+
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.71;
+}
+
+.footer-links .title {
+	color: rgba(255, 255, 255, 0.6);
+
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.71;
+	text-decoration: none;
+}
+
+/* Experiments */

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Студия</title>
+
+		<!-- Шрифты -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Нормализатор стилей -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+		/>
+
+		<!-- Мои стили -->
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+
+	<body>
+		<!-- Шапка сайта -->
+		<header class="page-header">
+			<!-- Нав - это всегда про ссылки на секции этой или других страниц -->
+			<div class="container">
+				<nav class="navbar">
+					<!-- Логотип, всегда ссылка -->
+					<a href="./index.html" class="logo"> Web<span class="logo header">Studio</span> </a>
+
+					<!-- Ссылки на другие страницы или разделы текущей -->
+					<ul class="site-nav">
+						<li><a href="./index.html" class="link current">Студия</a></li>
+						<li><a href="./portfolio.html" class="link">Портфолио</a></li>
+						<li><a href="" class="link">Контакты</a></li>
+					</ul>
+				</nav>
+
+				<!-- Контактные Данные в шапке, это не нав, потому что не ссылки на секции -->
+				<ul class="contacts-nav">
+					<li>
+						<a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+					</li>
+					<li><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- Уникальный контент сайта -->
+		<main>
+			<!-- Герой -->
+			<section class="hero">
+				<h1 class="hero-title">
+					Эффективные решения
+					<br />
+					для вашего бизнеса
+				</h1>
+				<!-- <button type="button">Заказать Услугу</button> -->
+				<a href="" class="btn">Заказать Услугу</a>
+				<!-- <button type="button">Заказать Услугу</button> -->
+			</section>
+
+			<!-- Features  -->
+			<section class="section features">
+				<h2 class="section-title is-hidden">Наши Преимущества</h2>
+
+				<!-- <div class="container"> -->
+				<div class="container">
+					<ul class="feature-list">
+						<li>
+							<h3 class="title">Внимание к деталям</h3>
+							<p>
+								Идейные соображения, а также начало повседневной работы по формированию позиции.
+							</p>
+						</li>
+						<li>
+							<h3 class="title">Пунктуальность</h3>
+							<p>
+								Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+							</p>
+						</li>
+						<li>
+							<h3 class="title">Планирование</h3>
+							<p>
+								Равным образом консультация с широким активом в значительной степени обуславливает.
+							</p>
+						</li>
+						<li>
+							<h3 class="title">Современные технологии</h3>
+							<p>
+								Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+							</p>
+						</li>
+					</ul>
+
+					<h2 class="section-title">Чем мы занимаемся</h2>
+					<ul>
+						<li>
+							<img src="./images/code.jpg" alt="Пишем код" width="370" height="294" />
+						</li>
+						<li>
+							<img src="./images/adapt.jpg" alt="Адаптируем под смартфоны и планшеты" width="370" height="294" />
+						</li>
+						<li>
+							<img src="./images/color.jpg" alt="Подбираем цветовое решение" width="370" height="294" />
+						</li>
+					</ul>
+				</div>
+				<!-- </div> -->
+			</section>
+
+			<!-- Чем Занимаемся -->
+			<!-- <section class="section wedo">
+				<div class="container">
+					<h2 class="section-title">Чем мы занимаемся</h2>
+					<ul>
+						<li>
+							<img src="./images/code.jpg" alt="Пишем код" width="370" height="294" />
+						</li>
+						<li>
+							<img src="./images/adapt.jpg" alt="Адаптируем под смартфоны и планшеты" width="370" height="294" />
+						</li>
+						<li>
+							<img src="./images/color.jpg" alt="Подбираем цветовое решение" width="370" height="294" />
+						</li>
+					</ul>
+				</div>
+			</section> -->
+
+			<!-- !!!!!!если набрать a.cool-teg, ты тегу сразу дается класс!! -->
+
+			<!-- НАША КОМАНДА!  -->
+			<section class="section team">
+				<div class="container">
+					<h2 class="section-title">Наша Команда</h2>
+
+					<ul class="team-list">
+						<li>
+							<img src="./images/igor.jpg" width="270" height="260" alt="Игорь Демьяненко" />
+							<h3 class="title">Игорь Демьяненко</h3>
+							<p lang="en">Product Designer</p>
+						</li>
+						<li>
+							<img src="./images/olga.jpg" width="270" height="260" alt="Ольга Репина" />
+							<h3 class="title">Ольга Репина</h3>
+							<p lang="en">Frontend Developer</p>
+						</li>
+						<li>
+							<img src="./images/kolya.jpg" width="270" height="260" alt="Николай Тарасов" />
+							<h3 class="title">Николай Тарасов</h3>
+							<p lang="en">Marketing</p>
+						</li>
+						<li>
+							<img src="./images/misha.jpg" width="270" height="260" alt="Михаил Ермаков" />
+							<h3 class="title">Михаил Ермаков</h3>
+							<p lang="en">UI Designer</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<!-- Футер -->
+		<!-- Я добавил ариа ссылку, которая используется в иконках-ссылках, когда нет текста, но нужно описание. Текст после ариа ссылки не читается обычно никакой ассистивной программой -->
+		<footer class="footbar">
+			<div class="container">
+				<a href="./index.html" class="logo" aria-label="main page link"> Web<span class="logo footer">Studio</span> </a>
+
+				<address class="footer-links">
+					<span class="coord">
+						г. Киев, пр-т Леси Украинки, 26
+					</span>
+
+					<ul>
+						<li><a href="mailto:info@example.com" class="title">info@example.com</a></li>
+
+						<li><a href="tel:+380961111111" class="title">+38 096 111 11 11</a></li>
+					</ul>
+				</address>
+			</div>
+		</footer>
+	</body>
+</html>

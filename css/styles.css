@@ -37,8 +37,8 @@ ul {
 .container {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
 	width: 1200px;
 	outline: 2px solid tomato;
 }
@@ -60,6 +60,8 @@ ul {
 	font-size: 26px;
 	line-height: 1.19;
 	text-decoration: none;
+
+	/* display: inline-block; */
 }
 
 .logo.header {
@@ -73,8 +75,27 @@ ul {
 
 /* Site Nav */
 
+.nav-container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 1200px;
+	outline: 2px solid tomato;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .navbar {
 	margin-bottom: 30px;
+	display: flex;
+	/* align-items: center; */
+}
+
+.site-nav {
+	display: flex;
 }
 
 .site-nav .link {
@@ -94,6 +115,10 @@ ul {
 
 .site-nav .link.current {
 	color: var(--accent-color);
+}
+
+.contacts-nav {
+	display: flex;
 }
 
 .contacts-nav .link {
@@ -158,6 +183,14 @@ ul {
 .feature-list {
 	margin-top: 0px;
 	margin-bottom: 94px;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.feature-list p {
+	max-width: 270px;
+	min-height: 101px;
 }
 
 .feature-list .title {
@@ -194,12 +227,20 @@ ul {
 	margin-bottom: 50px;
 }
 
+.images {
+	display: flex;
+}
+
 /* Section Team*/
 
 .section {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
+
+/* .wedo {
+	padding-top: 0px;
+} */
 
 .team-list img {
 	margin-bottom: 30px;
@@ -226,11 +267,21 @@ ul {
 	margin-bottom: 0px;
 }
 
-.team {
+.section.team {
 	background-color: var(--button-bcg);
 }
 
+.team-list {
+	display: flex;
+}
+
 /* Buttons Filters */
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
 
 .buttons button {
 	color: var(--title-text-color);
@@ -255,6 +306,13 @@ ul {
 /* если несколько кнопок то в главном селекторе выстраивается шрифты и рамки и так далее, а во второстепенных .button.primary .button.secondary - выстраиваются отличающиеся цвета */
 
 /* Portfolio */
+
+.portfolio-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 1200px;
+}
 
 .portfolio-list .title {
 	color: var(--title-text-color);

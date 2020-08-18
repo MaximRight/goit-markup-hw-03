@@ -7,7 +7,7 @@
 
 		<!-- Шрифты -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=fallback"
 			rel="stylesheet"
 		/>
 		<!-- Нормализатор стилей -->
@@ -31,18 +31,18 @@
 
 					<!-- Ссылки на другие страницы или разделы текущей -->
 					<ul class="site-nav">
-						<li><a href="./index.html" class="link">Студия</a></li>
-						<li><a href="./portfolio.html" class="link current">Портфолио</a></li>
-						<li><a href="" class="link">Контакты</a></li>
+						<li class="item"><a href="./index.html" class="link">Студия</a></li>
+						<li class="item"><a href="./portfolio.html" class="link current">Портфолио</a></li>
+						<li class="item"><a href="" class="link">Контакты</a></li>
 					</ul>
 				</nav>
 
 				<!-- Контактные Данные в шапке, это не нав, потому что не ссылки на секции -->
 				<ul class="contacts-nav">
-					<li>
+					<li class="item">
 						<a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
 					</li>
-					<li><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+					<li class="item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
 				</ul>
 			</div>
 		</header>
@@ -58,11 +58,11 @@
 					<h2 class="is-hidden">Фильтры</h2>
 
 					<ul class="buttons">
-						<li><button type="button">все</button></li>
-						<li><button type="button">веб сайты</button></li>
-						<li><button type="button">приложения</button></li>
-						<li><button type="button">дизайн</button></li>
-						<li><button type="button">маркетинг</button></li>
+						<li class="button"><button type="button">все</button></li>
+						<li class="button"><button type="button">веб сайты</button></li>
+						<li class="button"><button type="button">приложения</button></li>
+						<li class="button"><button type="button">дизайн</button></li>
+						<li class="button"><button type="button">маркетинг</button></li>
 					</ul>
 
 					<!-- PortFolio -->
@@ -72,6 +72,7 @@
 						<li class="portfolio-links">
 							<a href="">
 								<img
+									class="test"
 									src="./images/techno.jpg"
 									alt="картинка макбука про с отображенным сайтом источника"
 									width="370"

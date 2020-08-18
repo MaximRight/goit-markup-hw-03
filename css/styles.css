@@ -10,17 +10,19 @@
 	--accent-color: #2196f3;
 	--white-color: #ffffff;
 	--button-bcg: #f5f4fa;
+	--footer-color: #2f303a;
+	--header-stroke: #ececec;
 }
 
 body {
-	background-color: #e5e5e5fd;
+	background-color: var(--white-color);
 	color: var(--primary-text-color);
 
 	font-family: roboto, sans-serif;
 	letter-spacing: 0.03em;
 }
 
-/* это сброс маркеров для всех списков вообще */
+/* Утилиты, это сброс маркеров для всех списков вообще */
 ul {
 	margin: 0px;
 	padding: 0px;
@@ -40,28 +42,33 @@ ul {
 	padding-left: 15px;
 	padding-right: 15px;
 	width: 1200px;
-	outline: 2px solid tomato;
+	/* outline: 2px solid tomato; */
 }
 
 /* Page header */
 
 .page-header {
-	background-color: wheat;
+	/* background-color: wheat; */
 	padding-top: 24px;
 	padding-bottom: 24px;
+	border: 1px solid var(--header-stroke);
+	border-top: 0px;
 }
 
 /* Logo */
 
 .logo {
+	/* display: inline-block; */
+	/* Костыль, так как логотип нижу ссылок странице даже на дизайнерском макете */
+	padding-bottom: 7px;
+
 	font-family: "Raleway", sans-serif;
 	color: var(--accent-color);
 
 	font-size: 26px;
 	line-height: 1.19;
 	text-decoration: none;
-
-	/* display: inline-block; */
+	/* outline: 1px solid tomato; */
 }
 
 .logo.header {
@@ -73,32 +80,59 @@ ul {
 	color: var(--white-color);
 }
 
-/* Site Nav */
+/* Site Nav All in One*/
 
 .nav-container {
+	display: flex;
+	align-items: center;
+
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 15px;
 	width: 1200px;
-	outline: 2px solid tomato;
 
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	/* outline: 2px solid tomato; */
+}
+
+.nav-container .item + .item {
+	margin-left: 50px;
 }
 
 .navbar {
-	margin-bottom: 30px;
+	/* margin-bottom: 30px; */
 	display: flex;
-	/* align-items: center; */
+	align-items: center;
 }
 
 .site-nav {
 	display: flex;
+	/* outline: 1px solid tomato; */
+	margin-left: 93px;
 }
 
+/* Олд Скул метод исключения элементов, все последующие item применяется действие, если они стоят перед первым item, к нему действие не применяется, перед ним никого нет */
+
+/* В данном случае работает на всех списки, в каждом списке исключается первый элемент - круто! */
+
+/* Переношу это в главный нав-контейнер */
+
+/* .nav-container .item + .item {
+	margin-left: 50px;
+} */
+
+/* Современный вариант исключения элементов
+ */
+/* .site-nav .item:not(:last-child) {
+	outline: 1px solid tomato;
+	margin-right: 50px;
+} */
+
 .site-nav .link {
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
 	color: var(--title-text-color);
 
 	font-weight: 500;
@@ -119,6 +153,7 @@ ul {
 
 .contacts-nav {
 	display: flex;
+	margin-left: auto;
 }
 
 .contacts-nav .link {
@@ -139,9 +174,15 @@ ul {
 
 .hero {
 	text-align: center;
+
+	background-color: var(--footer-color);
 }
 
 .hero-title {
+	margin-top: 0px;
+	margin-bottom: 30px;
+	/* outline: 1px solid tomato; */
+
 	color: var(--white-color);
 
 	font-weight: 900;
@@ -149,13 +190,16 @@ ul {
 	line-height: 1.36;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
-
-	margin-top: 0px;
-	margin-bottom: 30px;
-	outline: 1px solid tomato;
 }
 
 .btn {
+	display: inline-block;
+	padding: 10px 32px;
+	border-radius: 4px;
+	min-width: 204px;
+	border: 1px solid transparent;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
 	color: var(--white-color);
 	background-color: var(--accent-color);
 
@@ -163,14 +207,7 @@ ul {
 	font-size: 16px;
 	line-height: 1.87;
 	letter-spacing: 0.06em;
-
-	display: inline-block;
 	text-decoration: none;
-	padding: 10px 32px;
-	border-radius: 4px;
-	min-width: 204px;
-	border: 1px solid transparent;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Features */
@@ -185,50 +222,62 @@ ul {
 	margin-bottom: 94px;
 
 	display: flex;
-	flex-direction: row;
 }
 
-.feature-list p {
+.feature-list .item {
+	width: 270px;
+	height: 101px;
+}
+
+.feature-list .item + .item {
+	margin-left: 30px;
+}
+
+/* .feature-list p {
 	max-width: 270px;
 	min-height: 101px;
-}
+} */
 
 .feature-list .title {
+	margin-top: 0px;
+	margin-bottom: 10px;
+
 	color: var(--title-text-color);
 
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
-
-	margin-top: 0px;
-	margin-bottom: 10px;
 }
 
 .feature-list p {
-	font-size: 14px;
-	line-height: 1.71;
-
 	margin-top: 0px;
 	margin-bottom: 0px;
+
+	font-size: 14px;
+	line-height: 1.71;
 }
 
 /* What We Do and Team Headers*/
 
 .section-title {
+	margin-top: 0px;
+	margin-bottom: 50px;
+
 	color: var(--title-text-color);
 
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.17;
 	text-align: center;
-
-	margin-top: 0px;
-	margin-bottom: 50px;
 }
 
 .images {
 	display: flex;
+}
+
+.images .item + .item {
+	margin-left: 30px;
 }
 
 /* Section Team*/
@@ -238,33 +287,43 @@ ul {
 	padding-bottom: 94px;
 }
 
+.team-list .item {
+	background-color: #fff;
+	height: 368px;
+}
+
+.team-list .item + .item {
+	margin-left: 30px;
+}
+
 /* .wedo {
 	padding-top: 0px;
 } */
 
-.team-list img {
+/* .team-list img {
 	margin-bottom: 30px;
-}
+} */
 
 .team-list .title {
+	padding-top: 30px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+
 	color: var(--title-text-color);
 
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.19;
-	/* text-align: center; */
-
-	margin-top: 0px;
-	margin-bottom: 10px;
+	text-align: center;
 }
 
 .team-list p {
-	font-size: 16px;
-	line-height: 1.19;
-	/* text-align: center; */
-
 	margin-top: 0px;
 	margin-bottom: 0px;
+
+	font-size: 16px;
+	line-height: 1.19;
+	text-align: center;
 }
 
 .section.team {
@@ -283,7 +342,15 @@ ul {
 	margin-bottom: 50px;
 }
 
+.buttons .button + .button {
+	margin-left: 8px;
+}
+
 .buttons button {
+	/* display: inline-block; */
+	padding: 6px 22px;
+	border-radius: 4px;
+
 	color: var(--title-text-color);
 	background-color: var(--button-bcg);
 
@@ -291,10 +358,6 @@ ul {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.62;
-
-	/* display: inline-block; */
-	padding: 6px 22px;
-	border-radius: 4px;
 }
 
 .buttons button:hover,
@@ -307,20 +370,67 @@ ul {
 
 /* Portfolio */
 
-.portfolio-list {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	max-width: 1200px;
+.portfolio-list img {
+	display: block;
 }
 
-.portfolio-list .title {
+.portfolio-list {
+	display: flex;
+	/* background-color: teal; */
+	/* justify-content: space-between; */
+	flex-wrap: wrap;
+	/* max-width: 1200px; */
+	margin: -15px;
+}
+
+/* calc (100% - кол-во марджинов в строке * значение марджина / количество элементов в строке) */
+
+.portfolio-links {
+	/* width: calc((100% - 60px) / 3); */
+	margin: 15px;
+	/* margin-right: 30px;
+	margin-bottom: 30px; */
+	width: 370px;
+	height: 404px;
+	/* background-color: tomato; */
+}
+
+/* Альтернатива, Вариация работы с оформлением флекса */
+
+/* .portfolio-links:not(:nth-child(3n)) {
+	margin-right: 30px;
+}
+
+.portfolio-links:not(:nth-last-child(-n + 3)) {
+	margin-bottom: 30px;
+} */
+
+/* .portfolio-links:nth-child(3n) {
+	margin-right: 0px;
+}
+
+.portfolio-links:nth-last-child(-n + 3) {
+	margin-bottom: 0px;
+} */
+
+.portfolio-links .title {
+	padding-left: 24px;
+	padding-right: 24px;
+	margin-top: 20px;
+	margin-bottom: 4px;
 	color: var(--title-text-color);
 
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 2;
 	letter-spacing: 0.06em;
+}
+
+.portfolio-links p {
+	margin-top: 0px;
+	margin-bottom: 20px;
+	padding-left: 24px;
+	padding-right: 24px;
 }
 
 .portfolio-links a {
@@ -334,9 +444,10 @@ ul {
 /* Footer */
 
 .footbar {
-	background-color: teal;
 	padding-top: 60px;
 	padding-bottom: 60px;
+
+	background-color: var(--footer-color);
 }
 
 .footbar a {

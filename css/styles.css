@@ -49,8 +49,8 @@ ul {
 
 .page-header {
 	/* background-color: wheat; */
-	padding-top: 24px;
-	padding-bottom: 24px;
+	/* padding-top: 24px;
+	padding-bottom: 24px; */
 	border: 1px solid var(--header-stroke);
 	border-top: 0px;
 }
@@ -455,14 +455,14 @@ ul {
 	margin-bottom: 20px;
 }
 
-.footer-links a,
-.coord {
+.footer-address a,
+.location {
 	display: inline-block;
 	margin-top: 0px;
 	margin-bottom: 9px;
 }
 
-.footer-links .coord {
+.footer-address .location {
 	color: #ffffff;
 
 	font-style: normal;
@@ -470,13 +470,17 @@ ul {
 	line-height: 1.71;
 }
 
-.footer-links .title {
+.footer-address .title {
 	color: rgba(255, 255, 255, 0.6);
 
 	font-style: normal;
 	font-size: 14px;
 	line-height: 1.71;
 	text-decoration: none;
+}
+
+.footer-address .title:hover {
+	color: var(--accent-color);
 }
 
 /* Experiments */

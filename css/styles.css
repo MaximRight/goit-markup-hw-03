@@ -174,12 +174,17 @@ ul {
 
 .hero {
 	text-align: center;
-
+	/* width: 1600px; */
+	height: 600px;
+	background-image: url(../images/background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
 	background-color: var(--footer-color);
 }
 
 .hero-title {
 	margin-top: 0px;
+	padding-top: 200px;
 	margin-bottom: 30px;
 	/* outline: 1px solid tomato; */
 
@@ -509,3 +514,66 @@ ul {
 }
 
 /* Experiments */
+
+.box::before {
+	content: "Это текст в ::before";
+	font-size: 40px;
+	color: orange;
+}
+
+.box::after {
+	content: "Это текст в ::after";
+	font-size: 30px;
+	color: teal;
+}
+
+.box:hover::after {
+	color: pink;
+}
+
+.list {
+	padding: 20px;
+	list-style: none;
+	font-family: sans-serif;
+}
+
+.list > .item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.list .link {
+	display: inline-flex;
+	align-items: center;
+	color: #212121;
+	text-decoration: none;
+	font-size: 32px;
+}
+
+.list .link::before,
+.list .link::after {
+	content: "";
+	width: 24px;
+	height: 24px;
+}
+
+/* Добавляем иконку огня перед текстом ссылки */
+.list .link::before {
+	margin-right: 16px;
+	background-image: url("https://image.flaticon.com/icons/svg/785/785116.svg");
+}
+
+/* Добавляем и прячем иконку кота после текста ссылки */
+.list .link::after {
+	display: none;
+	margin-left: 16px;
+	background-image: url("https://image.flaticon.com/icons/svg/616/616430.svg");
+}
+
+.list .link:hover {
+	color: #2196f3;
+}
+
+/* Показываем иконку кота при ховере по ссылки */
+.list .link:hover::after {
+	display: block;
+}

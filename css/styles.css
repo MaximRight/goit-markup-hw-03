@@ -52,8 +52,7 @@ ul {
 	/* background-color: wheat; */
 	/* padding-top: 24px;
 	padding-bottom: 24px; */
-	border: 1px solid var(--header-stroke);
-	border-top: 0px;
+	border-bottom: 1px solid var(--header-stroke);
 }
 
 /* Logo */
@@ -293,6 +292,8 @@ ul {
 
 	background-color: #fff;
 	height: 368px;
+	outline: 1px solid tomato;
+	text-align: center;
 }
 
 .team-list .item + .item {
@@ -317,7 +318,7 @@ ul {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.19;
-	text-align: center;
+	outline: 1px solid tomato;
 }
 
 .team-list p {
@@ -326,7 +327,7 @@ ul {
 
 	font-size: 16px;
 	line-height: 1.19;
-	text-align: center;
+	outline: 1px solid tomato;
 }
 
 .section.team {
@@ -380,18 +381,34 @@ ul {
 .portfolio-list {
 	display: flex;
 	/* background-color: teal; */
-	/* justify-content: space-between; */
 	flex-wrap: wrap;
 	/* max-width: 1200px; */
+
 	margin: -15px;
+	/* outline: 1px solid tomato; */
+
+	/* рагульный вариант */
+	/* justify-content: space-between; */
 }
 
 /* calc (100% - кол-во марджинов в строке * значение марджина / количество элементов в строке) */
 
-.portfolio-links {
-	/* width: calc((100% - 60px) / 3); */
-	margin: 15px;
+.card-content {
+	padding: 20px 24px;
 	border: 1px solid var(--folio-border);
+	border-top: 0px;
+}
+
+.portfolio-links {
+	/* моднявая тема */
+	/* width: calc((100% - 60px) / 3); */
+	/* здесь должен быть еще margin-right: ; */
+
+	margin: 15px;
+
+	/* border: 1px solid var(--folio-border); */
+
+	/* это для второго варианта работы с флексом */
 	/* margin-right: 30px;
 	margin-bottom: 30px; */
 	width: 370px;
@@ -400,7 +417,7 @@ ul {
 }
 
 /* Альтернатива, Вариация работы с оформлением флекса */
-
+/* первый вариант */
 /* .portfolio-links:not(:nth-child(3n)) {
 	margin-right: 30px;
 }
@@ -409,6 +426,7 @@ ul {
 	margin-bottom: 30px;
 } */
 
+/* второй вариант */
 /* .portfolio-links:nth-child(3n) {
 	margin-right: 0px;
 }
@@ -418,9 +436,10 @@ ul {
 } */
 
 .portfolio-links .title {
-	padding-left: 24px;
-	padding-right: 24px;
-	margin-top: 20px;
+	/* ATTENTION */
+	/* padding-left: 24px;
+	padding-right: 24px; */
+	margin-top: 0px;
 	margin-bottom: 4px;
 	color: var(--title-text-color);
 
@@ -432,9 +451,11 @@ ul {
 
 .portfolio-links p {
 	margin-top: 0px;
-	margin-bottom: 20px;
-	padding-left: 24px;
-	padding-right: 24px;
+	margin-bottom: 0px;
+
+	/* ATTENTION */
+	/* padding-left: 24px;
+	padding-right: 24px; */
 }
 
 .portfolio-links a {
